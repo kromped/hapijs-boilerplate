@@ -16,14 +16,6 @@ server.views({
 
 server.connection({port: 3000});
 
-//server.route({
-//    method: 'GET',
-//    path: '/',
-//    handler: function (request, reply) {
-//        reply.view('welcome/index');
-//    }
-//});
-
 var templateHandler = function(request, reply) {
     var controller = encodeURIComponent(_.trim(request.params.controller, '/')),
         action = encodeURIComponent(request.params.action || 'index'),
